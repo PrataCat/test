@@ -1,0 +1,145 @@
+<section class="contacts-page">
+  <div class="container">
+    <h1 class="contacts-page-title tracking-in-expand">Contacts</h1>
+  </div>
+
+  <div class="wrapp-primary-line">
+    <div class="primary-box-contacts"></div>
+    <div class="secondary-box-contacts"></div>
+  </div>
+  <div class="wrapp-secondary-line-contacts">
+    <div class="primary-box2-contacts"></div>
+    <div class="secondary-box2-contacts"></div>
+  </div>
+
+  <div class="contact-photo">
+    <picture>
+      <source
+        srcset="
+          ./images/contact-photo/contacts-img-desc.jpg    1x,
+          ./images/contact-photo/contacts-img-desc@2x.jpg 2x
+        "
+        media="(min-width: 1280px)"
+      />
+      <source
+        srcset="
+          ./images/contact-photo/contacts-img-tab.jpg    1x,
+          ./images/contact-photo/contacts-img-tab@2x.jpg 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="
+          ./images/contact-photo/contacts-img-mob.jpg    1x,
+          ./images/contact-photo/contacts-img-mob@2x.jpg 2x
+        "
+        media="(min-width: 480px)"
+      />
+      <img
+        class="contacts-img"
+        src="./images/contact-photo/contacts-img-mob.jpg"
+        alt="game-keyboard,headphones and controller"
+      />
+    </picture>
+  </div>
+
+  <div class="container">
+    <div class="descktop-thumb">
+      <div class="contacts-thumb">
+        <p class="contacts-page-text page-text">
+          In case of queries about order handling and/or delay, drop us an email
+          at
+        </p>
+        <a class="contacts-page-text" href="mailto:info@shopforgamers.com"
+          >info@shopforgamers.com</a
+        >
+        <div class="contacts-page-thumb">
+          <div class="email-thumb">
+            <p class="contacts-page-text">Email</p>
+            <a class="contacts-page-email-tel" href="mailto:sfg.info@gmail.com"
+              >sfg.info@gmail.com</a
+            >
+          </div>
+          <div class="tel-thumb">
+            <p class="contacts-page-text">Phone number</p>
+            <ul class="tel-list">
+              <li class="contacts-page-email-tel">
+                <a href="tel:+38(093)6432288" class="tel-margin"
+                  >+38 (093) 643 22 88</a
+                >
+              </li>
+              <li class="contacts-page-email-tel">
+                <a href="tel:+38(050)3454423">+38 (050) 345 44 23</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="form-thumb">
+        <p class="form-title">CONTACT US</p>
+        <form
+          class="contact-form"
+          name="CONTACT_US"
+          autocomplete="on"
+          novalidate
+        >
+          <div class="form-field">
+            <input
+              class="form-input"
+              type="text"
+              name="text"
+              id="user-name"
+              placeholder="Name"
+              pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+              required
+            />
+          </div>
+          <div class="form-field">
+            <input
+              class="form-input"
+              type="email"
+              name="email"
+              id="user-email"
+              placeholder="Email"
+              pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"
+              required
+            />
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="user-comment"
+              >Leave your message
+            </label>
+            <textarea
+              class="form-comment"
+              name="text"
+              id="user-comment"
+            ></textarea>
+          </div>
+          <button
+            data-modal-open
+            type="button"
+            class="btn-big btn-secondary-light"
+          >
+            SEND
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div data-modal class="backdrop is-hidden">
+    <div class="contacts-modal">
+      <button data-modal-close type="button" class="contacts-modal-close">
+        <svg class="contacts-modal-icon" width="12px" height="12px">
+          <use href="/src/images/symbol-defs.svg#icon-akar-icons_cross"></use>
+        </svg>
+      </button>
+      <div class="contacts-modal-thumb">
+        <p class="contacts-modal-text">Thank you</p>
+        <p class="contacts-modal-text">for your message!</p>
+        <p class="contacts-modal-text">We will contact you soon!</p>
+        <a href="./index.html" class="contacts-modal-btn">OK</a>
+      </div>
+    </div>
+  </div>
+  <script src="/src/partials/js/contacts-modal.js"></script>
+</section>

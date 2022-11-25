@@ -1,0 +1,236 @@
+.btn-flex {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #4c9915;
+}
+
+%btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: auto;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  line-height: 1.19;
+
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.btn-shop {
+  @extend %btn;
+
+  width: 95px;
+  height: 40px;
+
+  color: var(--button-text-and-bg);
+  background: var(--accent);
+  border: 1px solid var(--accent);
+
+  font-size: 14px;
+
+  transition-property: box-shadow;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    box-shadow: var(--box-shadow);
+  }
+
+  @include desktop {
+    width: 102px;
+    height: 46px;
+  }
+}
+
+.btn-big {
+  @extend %btn;
+
+  width: 173px;
+  height: 51px;
+  font-size: 16px;
+
+  text-transform: uppercase;
+
+  @include tablet {
+    width: 306px;
+    height: 70px;
+    font-size: 32px;
+  }
+}
+
+.take-order-btn-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16;
+  margin: 0 auto;
+
+  @include tablet {
+    gap: 24px;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+.btn-start-shopping {
+  margin: 0 auto;
+
+  @include tablet {
+    margin: 0;
+  }
+}
+
+.btn-big-prime {
+  color: var(--button-text-and-bg);
+  background: var(--accent);
+  border: 1px solid var(--accent);
+
+  transition-property: box-shadow;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    box-shadow: var(--box-shadow);
+  }
+}
+
+.btn-secondary {
+  color: var(--accent);
+  background: var(--button-text-and-bg);
+  border: 1px solid var(--accent);
+
+  transition-property: filter;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    filter: var(--box-shadow-full);
+  }
+}
+
+.btn-secondary-light {
+  margin: 0 auto;
+  color: var(--primary-text-color);
+  background: var(--button-text-and-bg);
+  border: 1px solid var(--primary-text-color);
+
+  transition-property: filter;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    filter: var(--box-shadow-light);
+  }
+
+  @include tablet {
+    margin: 0;
+  }
+}
+
+.btn-view-all {
+  @extend %btn;
+  margin: 0 auto;
+  width: 153px;
+  height: 51px;
+
+  color: var(--button-text-and-bg);
+  background: var(--primary-text-color);
+  border: 1px solid var(--primary-text-color);
+
+  font-size: 16px;
+
+  transition-property: box-shadow;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    box-shadow: var(--box-shadow-view-all);
+  }
+
+  @include tablet {
+    width: 195px;
+    height: 65px;
+    font-size: 28px;
+  }
+}
+
+.container-accessories-btn {
+  display: flex;
+  margin: 0 auto;
+  width: 272px;
+  padding: 0;
+
+  @include tablet {
+    min-width: 687px;
+  }
+
+  @include desktop {
+    min-width: 804px;
+  }
+}
+
+.accessories-btn-list {
+  @extend %flex-jc-ac;
+  gap: 24px;
+  flex-wrap: wrap;
+
+  @include tablet {
+    gap: 53px;
+  }
+
+  @include desktop {
+    gap: 44px;
+  }
+
+  @media screen and (max-width: 479px) {
+    gap: 15px;
+  }
+}
+
+.btn-accessories {
+  @extend %btn;
+
+  width: 124px;
+  height: 35px;
+
+  font-size: 16px;
+
+  transition-property: box-shadow, color, background;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    box-shadow: var(--box-shadow-full);
+  }
+
+  &:active {
+    color: var(--button-text-and-bg);
+    background: var(--accent);
+  }
+
+  @include tablet {
+    width: 132px;
+    height: 51px;
+  }
+
+  @include desktop {
+    width: 168px;
+    height: 51px;
+  }
+}
+
+.btn-modal {
+  margin: 0 auto;
+}

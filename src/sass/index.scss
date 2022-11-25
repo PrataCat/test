@@ -1,0 +1,31 @@
+// @import './common';
+// @import './example';
+@import './utils/mixin';
+@import './utils/fonts';
+@import './utils/variables';
+@import './utils/visually-hidden';
+@import './utils/placeholders';
+
+@import './base/reset';
+
+@import './base/common';
+
+@import './components/logo';
+@import './components/modal';
+@import './components/btn';
+@import './components/container';
+
+@import './layouts/header';
+@import './layouts/main-menu';
+@import './layouts/mob-menu';
+@import './layouts/main-hero';
+@import './layouts/main-slider';
+@import './layouts/main-sale';
+@import './layouts/footer';
+@import './layouts/accessories';
+@import './layouts/take-order';
+@import './layouts/contact';
+@import './layouts/blog';
+@import './layouts/blog-article';
+@import './layouts/modal-contact';
+@import './layouts/modal-take';

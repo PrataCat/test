@@ -1,0 +1,37 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+body {
+  padding-top: 104px;
+  margin: 0px;
+  background-color: var(--button-text-and-bg);
+  color: var(--primary-text-color);
+  font-family: var(--main-font);
+  @media screen and (max-width: 767px) {
+    background-image: url(../images/background/frame-45221-m-1x.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/background/frame-45221-m-2x.jpg);
+    }
+  }
+  @include tablet {
+    padding-top: 136px;
+  }
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}

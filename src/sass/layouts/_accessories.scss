@@ -1,0 +1,390 @@
+.accessories {
+  background-color: var(--button-text-and-bg);
+  background-image: url(../images/accessories-photo/mobil/bg-mobil-1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 40px;
+  padding-bottom: 48px;
+
+  @include retina {
+    & {
+      background-image: url(../images/accessories-photo/mobil/bg-mobile-2x.jpg);
+    }
+  }
+
+  // @includ retina {
+  //   @media (min-device-pixel-ratio: 2),
+  //     (-webkit-min-device-pixel-ratio: 2),
+  //     (min-resolution: 192dpi),
+  //     (min-resolution: 2dppx) {
+  //     background-image: url(../images/background/frame-45221-m-2x.jpg);
+  //     }
+  //   }
+
+  @include tablet {
+    padding-top: 120px;
+    padding-bottom: 168px;
+    background-image: url(../images/accessories-photo/tablet/bg-tablet-1x.jpg);
+
+    // @includ retina {
+    //   @media (min-device-pixel-ratio: 2),
+    //     (-webkit-min-device-pixel-ratio: 2),
+    //     (min-resolution: 192dpi),
+    //     (min-resolution: 2dppx) {
+    //     background-image: url(../images/background/frame-4511-t-2x.jpg);
+    //   }
+    // }
+    @include retina {
+      & {
+        background-image: url(../images/accessories-photo/tablet/bg-tablet-2x.jpg);
+      }
+    }
+  }
+
+  @include desktop {
+    padding-bottom: 97px;
+    background-image: url(../images/accessories-photo/desktop/bg-desktop-1x.jpg);
+
+    // @includ retina {
+    //   @media (min-device-pixel-ratio: 2),
+    //     (-webkit-min-device-pixel-ratio: 2),
+    //     (min-resolution: 192dpi),
+    //     (min-resolution: 2dppx) {
+    //     background-image: url(../images/background/frame391-d-2x.jpg);
+    //   }
+    // }
+    @include retina {
+      & {
+        background-image: url(../images/accessories-photo/desktop/bg-desktop-2x.jpg);
+      }
+    }
+  }
+}
+
+.container-accessories-btn {
+  padding-bottom: 32px;
+
+  @include tablet {
+    padding-bottom: 72px;
+  }
+
+  @include desktop {
+    padding-bottom: 95px;
+  }
+}
+
+.accessories-title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.17;
+
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  color: var(--primary-text-color);
+
+  @include tablet {
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 1.18;
+    padding-left: 109px;
+  }
+
+  @include desktop {
+    padding-left: 127px;
+  }
+}
+
+.accessories-wrap {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 27px;
+
+  @include mobile {
+    padding-top: 16px;
+  }
+
+  @include tablet {
+    padding-top: 24px;
+  }
+}
+
+.accessories-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  @include tablet {
+    column-gap: 38px;
+    row-gap: 24px;
+    justify-content: center;
+  }
+
+  @include desktop {
+    column-gap: 20px;
+    row-gap: 24px;
+  }
+}
+
+.accessories-box {
+  display: block;
+  width: 445px;
+  margin: 0;
+  padding-bottom: 12px;
+
+  @include tablet {
+    width: 285px;
+    height: 384px;
+  }
+
+  @include desktop {
+    width: 285px;
+    height: 384px;
+  }
+}
+
+.mobile-none {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.tablet-none {
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+}
+
+.accessories-grid {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  margin-bottom: 8px;
+
+  border: 1px solid #86e543;
+  filter: drop-shadow(0px 4px 4px rgba(134, 229, 67, 0.2));
+  border-radius: 12px;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    transform: translateY(101%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    background-color: var(--button-text-and-bg);
+  }
+
+  .accessories-link:hover &::before {
+    transform: translateY(0);
+  }
+}
+
+.accessories-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  border: 1px solid #86e543;
+  box-shadow: 0px 4px 4px rgba(134, 229, 67, 0.2);
+  border-radius: 12px;
+
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .accessories-link:hover & {
+    transform: translateY(0);
+  }
+}
+
+.accessories-item {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  padding: 16px 16px 52px;
+}
+
+.accessories-wrapper {
+  display: block;
+}
+
+.accessories-name {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.18;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 8px;
+  padding-right: 16px;
+
+  margin-bottom: 8px;
+  color: #86e543;
+}
+
+.accessories-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  padding-right: 16px;
+}
+
+.accessories-price__old {
+  font-family: 'Roboto';
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  text-decoration-line: line-through;
+  color: #8d9289;
+}
+
+.accessories-price__new {
+  font-family: 'Roboto';
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  margin-left: auto;
+  padding-right: 19px;
+
+  color: #86e543;
+}
+
+// лінії
+
+.accessories__wrapp-primary-line {
+  display: flex;
+}
+
+.accessories__wrapp-secondary-line {
+  display: flex;
+}
+
+.accessories__primary-box {
+  width: 43%;
+  height: 9px;
+
+  border-right: 1.5px solid #7be34a;
+  border-bottom: 1.5px solid #7be34a;
+
+  @include tablet {
+    width: 70%;
+    height: 20px;
+  }
+
+  @include desktop {
+    width: 43.5%;
+  }
+}
+
+.accessories__secondary-box {
+  width: 62%;
+  height: 9px;
+
+  border-top: 1.5px solid #7be34a;
+
+  @include tablet {
+    width: 30%;
+    height: 20px;
+  }
+
+  @include desktop {
+    width: 57%;
+  }
+}
+
+.accessories__primary-box2 {
+  width: 44%;
+  height: 9px;
+
+  border-right: 1.5px solid #28780d;
+  border-bottom: 1.5px solid #28780d;
+  transform: translateY(-5px);
+
+  @include tablet {
+    width: 71%;
+    height: 20px;
+    transform: translateY(-12px);
+  }
+
+  @include desktop {
+    width: 44%;
+  }
+}
+
+.accessories__secondary-box2 {
+  width: 61%;
+  height: 9px;
+
+  border-top: 1.5px solid #28780d;
+  transform: translateY(-5px);
+
+  @include tablet {
+    transform: translateY(-12px);
+    width: 29%;
+    height: 20px;
+  }
+
+  @include desktop {
+    width: 56.5%;
+  }
+}
+.tracking-in-expand {
+  -webkit-animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.61, 0.355, 1)
+    both;
+  animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2022-11-24 21:33:8
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation tracking-in-expand
+ * ----------------------------------------
+ */
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,9 @@
+ .logo {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: var(--primary-text-color);
+
+    @include font(700, 24px, 1.17, null);
+ }
